@@ -32,17 +32,17 @@ const Navbar = () => {
         </div>
       </Container>
       <div className="relative">
-        <div
+        {/* <div
           style={{
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 5% 100%)",
             backgroundColor: "#132722",
             position: "absolute", // Ensure the clipPath div is positioned
             top: "0",
             right: "0px",
-            width: "550px",
+            width: "700px",
             height: "100px",
           }}
-        ></div>
+        ></div> */}
         <Container>
           <div className="absolute top-8 left-[50%]">
             <ul className="flex justify-around items-center gap-16 font-semibold text-xl">
@@ -51,7 +51,7 @@ const Navbar = () => {
               <li>Stock</li>
               <li>Contact Us</li>
               <li>
-                <button className="bg-[#00d094] text-black text-lg font-semibold w-[100px] h-[40px] pt-2 -translate-y-[5px] rounded-md">
+                <button className="bg-[#00d094] text-black text-lg font-semibold w-[100px] h-[40px]  -translate-y-[5px] rounded-md">
                   Join us
                 </button>
               </li>
