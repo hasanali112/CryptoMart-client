@@ -19,6 +19,7 @@ const Offer = () => {
   const xRightValue = useTransform(scrollYProgress, [0, 1], [800, 0]);
   const rightValue = useTransform(scrollYProgress, [0, 1], [1500, 0]);
   const opacityValue = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scaleValue = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <div className="bg-[#172c25] pb-24 relative overflow-hidden">
@@ -65,6 +66,7 @@ const Offer = () => {
             className="flex-shrink-0 pt-10 relative z-20"
           >
             <motion.div
+              ref={containerRef}
               initial={{ x: 0 }}
               animate={{ x: [0, -50] }}
               transition={{
