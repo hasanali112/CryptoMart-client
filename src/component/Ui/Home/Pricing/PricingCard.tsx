@@ -18,11 +18,11 @@ const PricingCard = () => {
   const yValue = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
-    <div className="grid grid-cols-3 mt-10">
+    <div className="grid grid-cols-3 gap-5 mt-10">
       <motion.div
         ref={divRef}
         style={{ x: xLeftValue, transition: "1s ease" }}
-        className="w-[400px] h-[450px] bg-white/10 backdrop-blur-sm rounded-xl mt-5 p-10"
+        className="xl:w-[400px] h-[450px] bg-white/10 backdrop-blur-sm rounded-xl mt-5 p-10"
       >
         <h1 className="text-white text-2xl font-bold tracking-wider">Basic</h1>
         <h5 className="text-gray-400  mt-3">
@@ -57,7 +57,7 @@ const PricingCard = () => {
       <motion.div
         ref={divRef}
         style={{ y: yValue, transition: "1s ease" }}
-        className="w-[400px] h-[500px] bg-white/10 backdrop-blur-sm rounded-xl p-10"
+        className="xl:w-[400px] h-[500px] bg-white/10 backdrop-blur-sm rounded-xl p-10"
       >
         <h1 className="text-white text-2xl font-bold tracking-wider">
           Standard
@@ -94,7 +94,7 @@ const PricingCard = () => {
       <motion.div
         ref={divRef}
         style={{ x: xRightValue, transition: "1s ease" }}
-        className="w-[400px] h-[450px] bg-white/10 backdrop-blur-sm rounded-xl mt-5 p-10"
+        className="xl:w-[400px] h-[450px] bg-white/10 backdrop-blur-sm rounded-xl mt-5 p-10"
       >
         <h1 className="text-white text-2xl font-bold tracking-wider">
           Platinum

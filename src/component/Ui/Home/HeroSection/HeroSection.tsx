@@ -16,7 +16,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#00150f] relative overflow-hidden h-[100vh]">
+    <div className="bg-[#00150f] relative overflow-hidden h-[120vh] xl:h-[100vh]">
       <div
         style={{
           backgroundColor: "#132722",
@@ -30,9 +30,9 @@ const HeroSection = () => {
         }}
       ></div>
       <Container>
-        <div className="absolute top-[0%] left-[9%] ">
+        <div className="absolute top-[0%] xl:left-[9%] ">
           <div className="grid grid-cols-12 ">
-            <div className="col-span-5 mt-28">
+            <div className="col-span-5 xl:mt-28">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -51,10 +51,10 @@ const HeroSection = () => {
                   className="w-[120px] h-[120px]  mb-5"
                 />
               </motion.div>
-              <h1 className="text-white text-[52px] font-bold">
+              <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold">
                 Maximize your returns
               </h1>
-              <h1 className="text-white text-[52px] font-bold -translate-y-[14px]">
+              <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold -translate-y-[14px]">
                 with smart <span className="text-[#00d094]">investments</span>
               </h1>
               <p className="text-gray-300">

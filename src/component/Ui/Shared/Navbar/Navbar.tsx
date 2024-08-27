@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../Container";
 import logo from "@/assets/trading.png";
 import Image from "next/image";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <header className="bg-[#00150f] text-white relative h-[100px] overflow-hidden">
@@ -46,8 +47,12 @@ const Navbar = () => {
         <Container>
           <div className="absolute top-8 left-[50%]">
             <ul className="flex justify-around items-center gap-16 font-semibold text-xl">
-              <li>Home</li>
-              <li>About</li>
+              <Link href="/">
+                <li>Home</li>
+              </Link>
+              <Link href="/about">
+                <li>About</li>
+              </Link>
               <li>Stock</li>
               <li>Contact Us</li>
               <li>

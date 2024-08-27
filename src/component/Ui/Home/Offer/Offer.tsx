@@ -38,24 +38,29 @@ const Offer = () => {
               and premium quality.
             </p>
             <div className="mt-10 space-y-6">
-              <div className="w-[80%] h-[100px] bg-white/10 backdrop-blur-sm pt-2 rounded-xl">
+              <div className="w-[90%] h-[115px] bg-white/10 backdrop-blur-sm pt-3 rounded-xl">
                 <h5 className="text-white text-lg ml-4">
-                  Providing funds to fuel your new project ventures.
+                  We provide the financial support you need to kickstart your
+                  new project ventures. Fuel your ideas with our dedicated
+                  funding solutions.
                 </h5>
               </div>
-              <div className="w-[80%] h-[100px] bg-white/10 backdrop-blur-sm pt-2 rounded-xl">
-                <h5 className="text-white text-lg ml-4 ">
-                  Providing funds to fuel your new project ventures.
+              <div className="w-[90%] h-[115px] bg-white/10 backdrop-blur-sm pt-3 rounded-xl">
+                <h5 className="text-white text-lg ml-4 mx-4">
+                  Empower your project ideas with our tailored funding options.
+                  We&apos;re here to help you turn your vision into reality.
                 </h5>
               </div>
-              <div className="w-[80%] h-[100px] bg-white/10 backdrop-blur-sm  pt-2  rounded-xl">
+              <div className="w-[90%] h-[115px] bg-white/10 backdrop-blur-sm pt-3 rounded-xl">
                 <h5 className="text-white text-lg ml-4">
-                  Providing funds to fuel your new project ventures.
+                  Empower your new projects with the funding they deserve.
+                  We&apos;re here to help turn your vision into reality.
                 </h5>
               </div>
-              <div className="w-[80%] h-[100px] bg-white/10 backdrop-blur-sm pt-2  rounded-xl">
-                <h5 className="text-white text-lg ml-4 ">
-                  Providing funds to fuel your new project ventures.
+              <div className="w-[90%] h-[115px] bg-white/10 backdrop-blur-sm pt-3 rounded-xl">
+                <h5 className="text-white text-lg ml-4 mx-3">
+                  Fuel your next venture with our project funding. We&apos;re
+                  here to help you bring your ideas to life.
                 </h5>
               </div>
             </div>

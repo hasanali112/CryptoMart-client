@@ -11,7 +11,7 @@ const ServiceCard = ({ data }: any) => {
           {data.title}
         </h1>
         <p className="text-gray-400 w-[90%] mx-auto text-center mt-4">
-          {data.description}
+          {data.description.slice(0, 200)}
         </p>
       </div>
     </div>

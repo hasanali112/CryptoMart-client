@@ -19,7 +19,7 @@ const CompanyStatic = () => {
   const xRightValue = useTransform(scrollYProgress, [0, 1], [700, 0]);
 
   return (
-    <div className="bg-[#00150f] h-screen relative pt-20 overflow-hidden">
+    <div className="bg-[#00150f]  relative pt-20 lg:pb-40 xl:pb-28 overflow-hidden">
       <Container>
         <div className="relative flex justify-between gap-32 z-10">
           <div className="flex flex-shrink-0">
@@ -56,10 +56,10 @@ const CompanyStatic = () => {
             style={{ x: xRightValue, transition: "2s ease" }}
             className="pt-28"
           >
-            <h1 className="text-white font-bold text-5xl">
+            <h1 className="text-white font-bold lg:text-4xl xl:text-5xl">
               Get to <span className="text-[#00d094]">know our</span> company
             </h1>
-            <h1 className="text-white font-bold text-5xl mt-4">
+            <h1 className="text-white font-bold lg:text-4xl xl:text-5xl mt-4">
               miss the opportunity
             </h1>
             <p className="text-gray-500 mt-5">
