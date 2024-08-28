@@ -4,6 +4,8 @@ import { useRef } from "react";
 import Container from "../../Shared/Container";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RoadMapLeftSideCard from "./RoadMapLeftSideCard";
+import Image from "next/image";
+import shape from "@/assets/shape01-2.png";
 
 const RoadMap = () => {
   const containerRef1 = useRef<HTMLDivElement>(null);
@@ -32,12 +34,10 @@ const RoadMap = () => {
     offset: ["0 1", "1 1"],
   });
 
-  // Transform values for each card based on scroll progress
   const xRightValueCard1 = useTransform(scrollYProgress1, [0, 1], [400, 0]);
   const xRightValueCard2 = useTransform(scrollYProgress2, [0, 1], [400, 0]);
   const xRightValueCard3 = useTransform(scrollYProgress3, [0, 1], [400, 0]);
 
-  // Transform the height of the divider based on scroll progress
   const dividerHeight = useTransform(
     dividerScrollYProgress,
     [0, 1],
@@ -45,8 +45,8 @@ const RoadMap = () => {
   );
 
   return (
-    <div className="bg-[#081d17] pt-20 pb-28 overflow-hidden">
-      <Container>
+    <div className="bg-[#081d17] pt-20 pb-28 overflow-hidden relative">
+      <Container className="relative z-20">
         <div>
           <h1 className="text-center text-5xl font-bold text-white">
             Our <span className="text-[#00d094]">RoadMap</span>
@@ -143,6 +143,27 @@ const RoadMap = () => {
           </div>
         </div>
       </Container>
+      <div className="w-[500px] h-[500px] bg-[#1f3430] absolute top-0 z-0 rounded-br-[300px]"></div>
+      <div className="w-[510px] h-[510px] border-r border-b border-[#1f3430] absolute top-0  z-0 rounded-br-[300px]"></div>
+      <motion.div
+        initial={{ scale: 0.4 }}
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+        className="absolute top-[5%] left-[19%]"
+      >
+        <Image
+          src={shape}
+          alt="shape"
+          height={300}
+          width={300}
+          className="w-[100px] h-[100px]"
+        />
+      </motion.div>
     </div>
   );
 };

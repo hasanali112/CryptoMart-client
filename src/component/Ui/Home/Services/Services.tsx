@@ -51,10 +51,11 @@ const Services = () => {
   });
 
   const scaleValue = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  const yValue = useTransform(scrollYProgress, [0, 1], [500, 0]);
+  const yValue = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const opacityValue = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-36">
       <Container>
         <motion.div
           ref={containerRef}
@@ -69,7 +70,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          style={{ y: yValue, transition: "4s ease" }}
+          style={{ y: yValue, opacity: opacityValue, transition: "3s ease" }}
           className="grid grid-cols-3 gap-5 mt-16"
         >
           {offerData.map((data, index) => (

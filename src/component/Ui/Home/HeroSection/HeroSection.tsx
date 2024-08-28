@@ -16,48 +16,18 @@ import {
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#00150f] relative overflow-hidden h-[120vh] xl:h-[100vh]">
-      <div
-        style={{
-          backgroundColor: "#132722",
-          position: "absolute",
-          top: "-155px",
-          left: "-75px",
-          rotate: "25deg",
-          width: "500px",
-          height: "500px",
-          borderRadius: "30px 30px 100px 0px",
-        }}
-      ></div>
-      <Container>
-        <div className="absolute top-[0%] xl:left-[9%] ">
-          <div className="grid grid-cols-12 ">
-            <div className="col-span-5 xl:mt-28">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              >
-                <Image
-                  src={bannerCoin}
-                  alt="coin"
-                  width={400}
-                  height={400}
-                  className="w-[120px] h-[120px]  mb-5"
-                />
-              </motion.div>
+    <div className="bg-[#00150f] relative overflow-hidden ">
+      <Container className="relative z-20">
+        <div>
+          <div className="flex justify-between items-center">
+            <div className="flex-shrink-0 w-[50%]">
               <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold">
                 Maximize your returns
               </h1>
               <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold -translate-y-[14px]">
                 with smart <span className="text-[#00d094]">investments</span>
               </h1>
-              <p className="text-gray-300">
+              <p className="text-gray-300 ">
                 Bitrader allows anyone to invest in different currencies online,
                 offering a convenient way to grow their earnings. By leveraging
                 Bitrader.
@@ -89,10 +59,10 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-7">
+            <div className="flex-shrink-0">
               <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: [0, -40] }}
+                initial={{ x: -25 }}
+                animate={{ x: [-45, -100] }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
@@ -105,33 +75,59 @@ const HeroSection = () => {
                   alt="banner"
                   height={1000}
                   width={1000}
-                  className="w-[90%] h-full"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: [0, 1] }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              >
-                <Image
-                  src={bannerImage}
-                  alt="banner"
-                  height={200}
-                  width={200}
-                  priority
-                  placeholder="blur"
-                  className="w-[50px] h-[50px] -translate-y-28 -translate-x-10"
+                  className="w-[99%] h-[700px]"
                 />
               </motion.div>
             </div>
           </div>
         </div>
       </Container>
+      <div className="w-[490px] h-[500px] bg-[#132622] rounded-br-[200px] absolute rotate-[25deg] top-[-140px] left-[-72px] z-0"></div>
+      <div className="w-[495px] h-[510px] border border-[#132622] rounded-br-[200px] absolute rotate-[25deg] top-[-140px] left-[-72px] z-0"></div>
+      <motion.div
+        initial={{ rotateX: 0, rotateY: 0, rotateZ: 0 }}
+        animate={{
+          rotateX: [0, 45], // Rotate along X-axis
+          rotateY: [0, 45], // Rotate along Y-axis
+          rotateZ: [0, 45], // Rotate along Z-axis
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+        className="absolute top-[9%] left-[8%]"
+      >
+        <Image
+          src={bannerCoin}
+          alt="coin"
+          width={400}
+          height={400}
+          className="w-[100px] h-[100px]"
+        />
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+        className="absolute bottom-[10%] right-[48%]"
+      >
+        <Image
+          src={bannerImage}
+          alt="banner"
+          height={200}
+          width={200}
+          priority
+          placeholder="blur"
+          className="w-[40px] h-[40px] -translate-y-28 -translate-x-10"
+        />
+      </motion.div>
     </div>
   );
 };

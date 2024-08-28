@@ -16,7 +16,8 @@ const CompanyStatic = () => {
   });
 
   const xLeftValue = useTransform(scrollYProgress, [0, 1], [-700, 0]);
-  const xRightValue = useTransform(scrollYProgress, [0, 1], [700, 0]);
+  const xRightValue = useTransform(scrollYProgress, [0, 1], [1000, 0]);
+  const yValue = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
     <div className="bg-[#00150f]  relative pt-20 lg:pb-40 xl:pb-28 overflow-hidden">
@@ -35,20 +36,30 @@ const CompanyStatic = () => {
                 height={1000}
                 className="w-[500px] h-[500px]"
               />
-              <div className="bg-[#3d4f4a] w-[280px] h-[120px] rounded-lg pt-5 absolute top-[10%]">
-                <h1 className="text-[#00d094] text-4xl font-bold ml-7">
+              <motion.div
+                ref={refContainer}
+                style={{ x: xLeftValue, transition: "3s ease" }}
+                className="bg-white/10 backdrop-blur-sm w-[280px] h-[100px] rounded-[30px] rounded-tr-[90px] pt-5 absolute top-[10%]"
+              >
+                <h1 className="text-[#00d094] text-3xl font-bold ml-7">
                   10 Years
                 </h1>
                 <h6 className="text-white text-xl font-semibold ml-8">
                   Consulting Experience
                 </h6>
-              </div>
-              <div className="bg-[#3d4f4a] w-[280px] h-[120px] rounded-lg pt-5 absolute bottom-[5%] left-[46%]">
-                <h1 className="text-[#00d094] text-4xl font-bold ml-7">25K+</h1>
-                <h6 className="text-white text-xl font-semibold ml-8">
+              </motion.div>
+              <motion.div
+                ref={refContainer}
+                style={{ y: yValue, transition: "3s ease" }}
+                className="bg-white/10 backdrop-blur-sm w-[280px] h-[100px] rounded-[30px] rounded-bl-[90px] pt-5 absolute bottom-[5%] left-[46%]"
+              >
+                <h1 className="text-[#00d094] text-3xl font-bold ml-16">
+                  25K+
+                </h1>
+                <h6 className="text-white text-xl font-semibold ml-16">
                   Our Consumers
                 </h6>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
           <motion.div
