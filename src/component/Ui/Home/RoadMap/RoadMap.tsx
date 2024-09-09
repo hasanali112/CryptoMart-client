@@ -45,7 +45,7 @@ const RoadMap = () => {
   );
 
   return (
-    <div className="bg-[#081d17] pt-20 pb-28 overflow-hidden relative">
+    <div className="bg-[#081d17] pt-20 pb-28 overflow-hidden relative hidden lg:block md:hidden">
       <Container className="relative z-20">
         <div>
           <h1 className="text-center text-5xl font-bold text-white">

@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#00150f]  text-white pt-10">
       <Container>
-        <div className=" flex  md:flex-row justify-between items-center">
+        <div className=" flex flex-col  md:flex-row lg:justify-between md:items-center lg:items-center md:gap-6">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center mb-4">
               <div className="flex gap-3 items-center pt-2">
@@ -44,7 +44,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <h4 className="font-semibold text-2xl mb-2">Quick links</h4>
             <ul>
               <li className="mb-1 text-lg text-gray-400">
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <h4 className="font-semibold text-2xl mb-2">Support</h4>
             <ul>
               <li className="mb-1 text-lg text-gray-400">
@@ -94,7 +94,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <h4 className="font-semibold text-2xl mb-2">Company</h4>
             <ul>
               <li className="mb-1 text-lg text-gray-400">
@@ -119,14 +119,93 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <div className="block  lg:hidden">
+            <div className="grid grid-cols-2 ">
+              <div>
+                <h4 className="font-semibold text-2xl mb-2">Quick links</h4>
+                <ul>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      About Us
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Teams
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Services
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Features
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-2xl mb-2">Support</h4>
+                <ul>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      FAQs
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Support Center
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="md:hidden">
+                <h4 className="font-semibold text-2xl mb-2">Company</h4>
+                <ul>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Careers
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Updates
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Job
+                    </a>
+                  </li>
+                  <li className="mb-1 text-lg text-gray-400">
+                    <a href="#" className="hover:text-gray-300">
+                      Announce
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-8 border-t border-gray-700 pt-4 pb-6">
-          <div className="flex justify-between mt-4 md:mt-0">
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center mt-4 md:mt-0">
             <p className="text-lg text-gray-400 text-center">
               &copy; 2024 All Rights Reserved By CryptoMart
             </p>
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-center mt-5">
               <div className="border border-[#0d4939] rounded-full w-[40px] h-[40px] flex justify-center items-center">
                 <FacebookIcon className="w-5" />
               </div>

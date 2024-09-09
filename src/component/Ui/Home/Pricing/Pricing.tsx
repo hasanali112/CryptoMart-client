@@ -9,7 +9,7 @@ const Pricing = () => {
           <h1 className="text-4xl font-bold text-white text-center">
             Our <span className="text-[#00d094]">Subcription</span> Plan
           </h1>
-          <p className="text-lg text-gray-400 w-[50%] mx-auto text-center mt-5">
+          <p className="text-lg text-gray-400 md:w-[80%] lg:w-[50%] mx-auto text-center mt-5">
             We provide unbeatable pricing for everything from installations and
             repairs to maintenance and beyond!
           </p>

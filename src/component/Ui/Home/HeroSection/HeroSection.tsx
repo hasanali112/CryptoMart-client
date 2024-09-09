@@ -13,31 +13,37 @@ import {
   TwitchIcon,
   YoutubeIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
     <div className="bg-[#00150f] relative overflow-hidden ">
       <Container className="relative z-20">
         <div>
-          <div className="flex justify-between items-center">
-            <div className="flex-shrink-0 w-[50%]">
-              <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold">
+          <div className="flex flex-col md:flex-row md:justify-between items-center pt-10 lg:pt-0">
+            <div className="flex-shrink-0 lg:w-[50%] md:w-[50%]">
+              <h1 className="text-white text-3xl lg:text-[40px] xl:text-[52px] font-bold">
                 Maximize your returns
               </h1>
-              <h1 className="text-white lg:text-[40px] xl:text-[52px] font-bold -translate-y-[14px]">
+              <h1 className="text-white text-3xl lg:text-[40px] xl:text-[52px] font-bold lg:mt-6">
                 with smart <span className="text-[#00d094]">investments</span>
               </h1>
-              <p className="text-gray-300 ">
+              <p className="text-gray-300 mt-5">
                 Bitrader allows anyone to invest in different currencies online,
                 offering a convenient way to grow their earnings. By leveraging
                 Bitrader.
               </p>
-              <Button className="bg-[#00d094] text-black w-[170px] rounded-sm h-[50px] mt-9 text-lg">
-                Get Started
-              </Button>
+              <Link
+                href="https://www.binance.com/en/trading-bots"
+                target="_blank"
+              >
+                <Button className="bg-[#00d094] text-black md:w-[170px] rounded-sm h-[50px] mt-9 text-lg">
+                  Get Started
+                </Button>
+              </Link>
               <Button
                 variant="outline"
-                className="border-[#00d094] border bg-transparent text-[#00d094] w-[170px] rounded-sm h-[50px] mt-4 text-lg ml-4"
+                className="border-[#00d094] border bg-transparent text-[#00d094] md:w-[170px] rounded-sm h-[50px] mt-4 text-lg ml-4"
               >
                 Watch Vedio
               </Button>
@@ -75,7 +81,7 @@ const HeroSection = () => {
                   alt="banner"
                   height={1000}
                   width={1000}
-                  className="w-[99%] h-[700px]"
+                  className="lg:w-[99%] w-[100%] md:h-[470px] lg:h-[700px] h-[350px] ml-10 md:ml-0 lg:ml-0 "
                 />
               </motion.div>
             </div>

@@ -4,6 +4,7 @@ import logo from "@/assets/trading.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   return (
     <header className="bg-[#00150f] text-white relative h-[110px]  w-full">
@@ -18,24 +19,39 @@ const Navbar = () => {
                 width={500}
                 className="w-[40px] h-[40px]"
               />
-              <h1 className="text-4xl font-bold">
+              <h1 className="lg:text-4xl text-3xl font-bold">
                 Crypto<span className="text-[#00d094]">Mart</span>
               </h1>
             </div>
-            <ul className="flex justify-around items-center gap-16 font-semibold text-xl">
-              <Link href="/">
-                <li>Home</li>
-              </Link>
-              <Link href="/about">
-                <li>About</li>
-              </Link>
-              <li>Stock</li>
-              <li>Contact Us</li>
-            </ul>
-            <div>
-              <Button className="bg-[#00d094] text-black w-[170px] rounded-sm h-[50px]  text-lg">
-                Join Us
-              </Button>
+            <div className="hidden md:hidden lg:block">
+              <ul className="flex justify-around items-center gap-16 font-semibold text-xl">
+                <Link href="/">
+                  <li>Home</li>
+                </Link>
+                <Link href="/stocks">
+                  <li>Stock</li>
+                </Link>
+                <Link href="/about">
+                  <li>About</li>
+                </Link>
+
+                <Link href="/expert">
+                  <li>Meet Experts</li>
+                </Link>
+                <Link
+                  href=' href="https://www.binance.com/en/trading-bots"
+                '
+                  target="_blank"
+                >
+                  {" "}
+                  <Button className="bg-[#00d094] text-black w-[170px] rounded-sm h-[50px]  text-lg">
+                    Buy Stock
+                  </Button>
+                </Link>
+              </ul>
+            </div>
+            <div className="block md:block lg:hidden">
+              <MobileNavbar />
             </div>
           </div>
         </Container>

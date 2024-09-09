@@ -61,17 +61,17 @@ const Services = () => {
           ref={containerRef}
           style={{ scale: scaleValue, transition: "2s ease" }}
         >
-          <h1 className="text-5xl font-bold text-center text-white">
+          <h1 className="lg:text-5xl text-4xl font-bold text-center text-white">
             <span className="text-[#00d094]">Service</span> We Offers
           </h1>
-          <p className="text-lg  w-[50%] mx-auto  text-center text-gray-400 mt-5">
+          <p className="text-lg  lg:w-[50%] mx-auto  text-center text-gray-400 mt-5">
             Our top-notch services cover everything from installations and
             repairs to maintenance and beyond!
           </p>
         </motion.div>
         <motion.div
           style={{ y: yValue, opacity: opacityValue, transition: "3s ease" }}
-          className="grid grid-cols-3 gap-5 mt-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16"
         >
           {offerData.map((data, index) => (
             <ServiceCard key={index} data={data} />
