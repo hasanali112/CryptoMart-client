@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import MobileNavbar from "./MobileNavbar";
+
 const Navbar = () => {
   return (
     <header className="bg-[#00150f] text-white relative h-[110px]  w-full">
