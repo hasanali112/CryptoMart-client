@@ -55,7 +55,7 @@ The production app will be available at http://localhost:3000.
 In the project directory, you can run the following scripts:
 
 `npm run dev:` Runs the application in development mode.<br/>
-`npm run build:` Builds the application for production.<br/>
+`npm run build:` Builds the production application.<br/>
 `npm run start:` Starts the application in production mode.<br/>
 `npm run lint:` Runs the linter to check for code issues.<br/>
 `npm run test:` Runs the test suite (if tests are configured).
